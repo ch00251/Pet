@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Pet</title>
 </head>
 <body>
-	<p>main페이지 입니다.</p>
+<div class="container">
+	<jsp:include page = "common/top.jsp" flush = "true"></jsp:include>
+</div>
 </body>
 </html>
