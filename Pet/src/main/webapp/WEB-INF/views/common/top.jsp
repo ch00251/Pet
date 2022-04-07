@@ -22,7 +22,7 @@
 	<div class = "button" style="float: right;">
 		<!-- 로그인이 안된 경우 -->
 		<c:if test="${empty login }">
-			<a href="#" class="login">
+			<a href="loginForm" class="login">
 			<img src="images/header_login_icon.png" alt="로그인"
 				onmouseover="this.src='images/header_login_icon_on.png'" 
 				onmouseout="this.src='images/header_login_icon.png'">
@@ -35,14 +35,14 @@
 		</c:if>
 		<!-- 로그인이 된 경우 -->
 		<c:if test="${!empty login }">
-			<a href="#" class="logout">
+			<a href="loginCheck/logout" class="logout">
 			<img src="images/header_logout_icon.png" alt="로그아웃"
 				onmouseover="this.src='images/header_logout_icon_on.png'" 
 				onmouseout="this.src='images/header_logout_icon.png'">
 			</a>
 			<a href="#" class="mypage">
 			<img src="images/header_mypage_icon.png" alt="마이페이지"
-				onmouseover="this.src='images/header_join_mypage_on.png'" 
+				onmouseover="this.src='images/header_mypage_icon_on.png'" 
 				onmouseout="this.src='images/header_mypage_icon.png'">
 			</a>
 		</c:if>
