@@ -14,7 +14,7 @@
 <!-- web-inf 폴더는 반드시 리소스 등록 후 사용 -->
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"></mvc:resources>
 <mvc:resources location="/WEB-INF/SmartEditor/" mapping="/SmartEditor/**"></mvc:resources>
-
+<mvc:resources location="/WEB-INF/views/resources/" mapping="/resources/**"></mvc:resources>
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix" value="/WEB-INF/views/"></property>

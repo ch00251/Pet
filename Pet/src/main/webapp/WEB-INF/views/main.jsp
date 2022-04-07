@@ -9,6 +9,9 @@
 <body>
 <div class="container">
 	<jsp:include page = "common/top.jsp" flush = "true"></jsp:include>
+	<br /><br />
+	<jsp:include page = "common/menu.jsp" flush = "true"></jsp:include>
 </div>
+
 </body>
 </html>
