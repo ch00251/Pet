@@ -35,7 +35,7 @@
 		</c:if>
 		<!-- 로그인이 된 경우 -->
 		<c:if test="${!empty login }">
-			<a href="#" class="logout">
+			<a href="loginCheck/logout" class="logout">
 			<img src="images/header_logout_icon.png" alt="로그아웃"
 				onmouseover="this.src='images/header_logout_icon_on.png'" 
 				onmouseout="this.src='images/header_logout_icon.png'">

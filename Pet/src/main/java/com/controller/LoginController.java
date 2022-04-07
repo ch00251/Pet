@@ -32,4 +32,11 @@ public class LoginController {
 			return page;
 		}
 	}
+	
+	//로그아웃
+		@RequestMapping(value = "/loginCheck/logout")
+		public String logout(HttpSession session) {
+			session.invalidate();
+			return "redirect:../";//main.jsp로
+		}
 }
