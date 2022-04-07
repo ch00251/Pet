@@ -3,24 +3,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <style>
-.logo {
-    float: left;
-    width:25%;
-    box-sizing: border-box;
-    display:inline
+.parent{
+	width:100%;
 }
-
-.button{
-    float: right;
+.logo {
+    float: center;
     width:25%;
-    height : 200px;
     box-sizing: border-box;
+    display:inline;
 }
 </style>
 <div class = "parent">
 	<br />
 	<div class = "logo">
-		<a href="/Pet"><img src="images/logo.png" style="width: "></a>
+		<a href="/Pet"><img src="images/logo.png"></a>
 	</div>
 	<br />
 	<div class = "button" style="float: right;">
