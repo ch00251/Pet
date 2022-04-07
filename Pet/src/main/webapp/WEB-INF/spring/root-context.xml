@@ -23,13 +23,13 @@
 	<property name="mapperLocations"><!-- mapper설정 -->
 		<list>
 			<!-- mapper 등록 -->
-			
+			<value>classpath:com/config/MemberMapper.xml</value>
 		</list>
 	</property>
 	<property name="typeAliases">
 		<list>
 			<!-- dto등록 -->
-			
+			<value>com.dto.MemberDTO</value>
 		</list>
 	</property>
 </bean>
