@@ -13,7 +13,7 @@
 	<br /><br />
 	<jsp:include page = "common/menu.jsp" flush = "true"></jsp:include>
 	<br />
-	<jsp:include page="board/boardList.jsp" flush="true"></jsp:include>
+	<jsp:include page="board/reviewList.jsp" flush="true"></jsp:include>
 </div>
 </body>
 </html>

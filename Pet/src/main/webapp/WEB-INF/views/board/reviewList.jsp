@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="container">
-<p>게시판</p>
+<p>상품 후기</p>
 <a href="#" class="btn btn-outline-dark">새글 작성</a>
 <select class="form-select" aria-label="Default select example">
   <option selected>전체</option>
@@ -44,7 +44,7 @@
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" id="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/Pet">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">게시판</li>
+    <li class="breadcrumb-item active" aria-current="page">상품 후기</li>
   </ol>
 </nav>
 <br /><br />
@@ -52,10 +52,12 @@
 	<thead>
 		<tr>
 			<th>글번호</th>
-			<th width="50%">제목</th>
+			<th>상품 정보</th>
+			<th width="30%">제목</th>
 			<th>작성자</th>
-			<th>등록일</th>
+			<th>작성일</th>
 			<th>조회수</th>
+			<th>평점</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -65,6 +67,8 @@
 			<td></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<th></th>
 		</tr>
 	</tbody>
 </table>
