@@ -64,7 +64,7 @@
 	<c:forEach var="x" items="${boardList }">
 		<tr>
 			<td>${x.num }</td>
-			<td><a href="#">${x.title }</a></td>
+			<td><a href="boardRetrieve?num=${x.num }">${x.title }</a></td>
 			<td>${x.userid }</td>
 			<td>${x.regdate }</td>
 			<td>${x.viewCount }</td>
