@@ -29,9 +29,10 @@
 	    border-bottom: 1px solid #444444;
 	    padding: 10px;
 	}
-	th {
-
-    }
+	td > a{
+		color: black;
+		text-decoration: none;
+	}
 </style>
 </head>
 <body>

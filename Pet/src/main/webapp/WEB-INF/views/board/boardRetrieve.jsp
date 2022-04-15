@@ -29,13 +29,11 @@
 	}
 	th{
 		width: 10%;
-		border: 1px gray solid;
+		border-right: 1px gray solid;
+		border-bottom: 1px gray solid;
 	}
-	td{
-		border : 1px gray solid;
-	}
-	tr{
-		border : 1px gray solid;
+	td {
+	    border-bottom: 1px gray solid;
 	}
 	.contents{
 		height: 200px;
@@ -49,6 +47,7 @@
 <body>
 <div class="container">
 	<p style="display:table; margin-left: auto; margin-right: auto;">글 상세 페이지</p>
+	<br />
 	<table class="board" width="80%">
 		<tr>
 			<th>제목</th>

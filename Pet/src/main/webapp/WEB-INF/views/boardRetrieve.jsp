@@ -23,7 +23,7 @@
 	<jsp:include page="common/top.jsp" flush="true"/>
 	<br /><br />
 	<jsp:include page="common/menu.jsp" flush="true"/>
-	<br />
+	<br /><br />
 	<jsp:include page="board/boardRetrieve.jsp" flush="true"/>
 </div>
 </body>
