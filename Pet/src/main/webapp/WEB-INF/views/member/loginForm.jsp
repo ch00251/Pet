@@ -31,14 +31,21 @@
 		text-align: center;
 	}
 	#userid{
-		margin-left: 16px;
+		margin-left: 30px;
 		margin-bottom: 5px;
+		width: 220px;
+		height: 35px;		
+	}
+	#passwd{
+		width : 220px;
+		margin-left:15px;
+		height: 35px;
 	}
 	p {
 		text-align: center;
 	}
 	#loginbtn{
-		width: 262px;
+		width: 310px;
 	}
 	.ot_link {
 		display: table; 
@@ -52,17 +59,17 @@
 	.ot_link li {
 		list-style-type: none;
 		float: left;
+		margin-left : 5px;
+		text-align: center;
 	}
 	.ot_link li a {
 	    display: block;
 	    border: 1px solid #000000;
 	    padding: 10px 0;
-	    margin-top:10px;
-	    margin-botton:10px;
-	    margin-left:5px;
 	    background: #fff;
 	    transition: 0.2s;
-	    width: 126.4px;
+	    width: 100px;
+	    height: 70px;
 	}
 	.icon>img{
 		width: 25px;
@@ -83,7 +90,7 @@
 <br /><br />
 <div class="item">
 <ul class="ot_link">
-	<li><a onclick="searchId();">
+	<li style="margin-left:45px;"><a onclick="searchId();">
 	<div class="icon"><img src="images/ico_6601.png" alt=""></div>아이디찾기</a></li>
 	<li><a onclick="searchPwd();">
 	<div class="icon"><img src="images/ico_6602.png" alt=""></div>비밀번호찾기</a></li>
