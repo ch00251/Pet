@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,13 +61,15 @@
 		</tr>
 	</thead>
 	<tbody>
+	<c:forEach var="x" items="${boardList }">
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>${x.num }</td>
+			<td><a href="#">${x.title }</a></td>
+			<td>${x.userid }</td>
+			<td>${x.regdate }</td>
+			<td>${x.viewCount }</td>
 		</tr>
+	</c:forEach>
 	</tbody>
 </table>
 </div>
