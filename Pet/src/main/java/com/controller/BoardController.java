@@ -47,4 +47,15 @@ public class BoardController {
 		session.setAttribute("success", "등록되었습니다.");
 		return "redirect:boardList";
 	}
+
+	//게시판 글 수정
+	@RequestMapping(value = "/loginCheck/boardUpdate")
+	public String boradUdpate(BoardDTO dto, HttpSession session) {
+		service.boardUpdate(dto);
+		System.out.println("업데이트 내용"+dto);
+		session.setAttribute("update", "수정되었습니다");		
+		return "redirect:boardRetrieve?num="+dto.getNum();
+		
+	}
 }
+
