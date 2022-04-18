@@ -28,4 +28,10 @@ public class BoardService {
 		return dao.addViewCount(num);
 	}
 
+	public void boardInsert(BoardDTO dto) {
+		// TODO Auto-generated method stub
+		System.out.println(dao);
+		dao.boardInsert(dto);
+	}
+
 }

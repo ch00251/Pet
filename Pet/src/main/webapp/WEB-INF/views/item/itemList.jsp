@@ -59,7 +59,7 @@
 			<input type="radio" class="btn-check" name="options2" id="2_option3" autocomplete="off">
 			<label class="btn btn-secondary" for="2_option3">소고기</label>
 			<input type="radio" class="btn-check" name="options2" id="2_option4" autocomplete="off">
-			<label class="btn btn-secondary" for="2_option4">오리</label>
+			<label class="btn btn-secondary" for="2_option4">오리</label>                                                          
 			<input type="radio" class="btn-check" name="options2" id="2_option5" autocomplete="off">
 			<label class="btn btn-secondary" for="2_option5">그 외</label>
 		</div>

@@ -38,7 +38,7 @@
 <body>
 <div class="container">
 <p>게시판</p>
-<a href="#" class="btn btn-outline-dark">새글 작성</a>
+<a href="boardInsertForm" class="btn btn-outline-dark">새글 작성</a>
 <select class="form-select" aria-label="Default select example">
   <option selected>전체</option>
   <option value="1">강아지</option>

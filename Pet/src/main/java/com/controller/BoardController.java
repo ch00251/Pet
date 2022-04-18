@@ -39,4 +39,12 @@ public class BoardController {
 		System.out.println(dto);
 		return dto;
 	}
+	//게시판 글 작성
+	@RequestMapping(value = "/boardInsert")
+	public String boardInsert(BoardDTO dto, HttpSession session) {
+		service.boardInsert(dto);
+		System.out.println("게시판 insert:"+dto);
+		session.setAttribute("success", "등록되었습니다.");
+		return "redirect:boardList";
+	}
 }
