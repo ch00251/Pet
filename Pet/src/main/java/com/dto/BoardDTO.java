@@ -6,6 +6,7 @@ import org.apache.ibatis.type.Alias;
 public class BoardDTO {
 	private int num;
 	private String userid;
+	private String cateAni;
 	private String title;
 	private String content;
 	private String regdate;
@@ -25,6 +26,12 @@ public class BoardDTO {
 	}
 	public void setUserid(String userid) {
 		this.userid = userid;
+	}
+	public String getCateAni() {
+		return cateAni;
+	}
+	public void setCateAni(String cateAni) {
+		this.cateAni = cateAni;
 	}
 	public String getTitle() {
 		return title;
@@ -52,7 +59,8 @@ public class BoardDTO {
 	}
 	@Override
 	public String toString() {
-		return "BoardDTO [num=" + num + ", userid=" + userid + ", title=" + title + ", content=" + content
-				+ ", regdate=" + regdate + ", viewCount=" + viewCount + "]";
+		return "BoardDTO [num=" + num + ", userid=" + userid + ", cateAni=" + cateAni + ", title=" + title
+				+ ", content=" + content + ", regdate=" + regdate + ", viewCount=" + viewCount + "]";
 	}
+	
 }

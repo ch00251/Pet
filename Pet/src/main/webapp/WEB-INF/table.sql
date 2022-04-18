@@ -21,6 +21,20 @@ create table member(
 
 create sequence member_seq;
 
+-- 게시판 테이블
+create table board(
+num number primary key, 
+userid varchar2(50) not null,
+title varchar2(100) not null,
+cateAni varchar2(20),
+content clob not null,
+regdate date default sysdate,
+viewCount number default 0
+);
+
+create sequence board_seq;
+
+
 --리뷰 테이블
 create table review(
 	reviewNum number primary key,

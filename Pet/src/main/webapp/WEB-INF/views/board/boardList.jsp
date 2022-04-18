@@ -38,20 +38,25 @@
 <body>
 <div class="container">
 <p>게시판</p>
-<c:if test="${!empty login }">
-	<a href="boardInsertForm" class="btn btn-outline-dark">새글 작성</a>
-</c:if>
-<select class="form-select" aria-label="Default select example">
-  <option selected>전체</option>
-  <option value="1">강아지</option>
-  <option value="2">고양이</option>
-</select>
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" id="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/Pet">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">게시판</li>
   </ol>
 </nav>
+<br /><br />
+<c:if test="${!empty login }">
+	<a href="boardInsertForm" class="btn btn-outline-dark" style="float: right;">새글 작성</a>
+</c:if>
+<!-- select 기능 -->
+<form action="targetSelect">
+<select class="form-select" aria-label="Default select example" name="searchName">
+  <option selected>전체</option>
+  <option value="dog">강아지</option>
+  <option value="cat">고양이</option>
+</select>
+</form>
+<input type="submit" value="검색" style="width: 60px; height: 38px;" class="btn btn-outline-dark"/>
 <br /><br />
 <table style="width:100%;">
 	<thead>
