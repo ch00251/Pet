@@ -18,4 +18,20 @@ public class BoardService {
 		return dao.boardList(dto);
 	}
 
+	public BoardDTO boardRetrieve(int num) {
+		// TODO Auto-generated method stub
+		return dao.boardRetrieve(num);
+	}
+
+	public int addViewCount(int num) {
+		// TODO Auto-generated method stub
+		return dao.addViewCount(num);
+	}
+
+	public void boardInsert(BoardDTO dto) {
+		// TODO Auto-generated method stub
+		System.out.println(dao);
+		dao.boardInsert(dto);
+	}
+
 }

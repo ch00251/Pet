@@ -16,5 +16,17 @@ public class BoardDAO {
 		// TODO Auto-generated method stub
 		return template.selectList("BoardMapper.boardList", dto);
 	}
+	public BoardDTO boardRetrieve(int num) {
+		// TODO Auto-generated method stub
+		return template.selectOne("BoardMapper.boardRetrieve", num);
+	}
+	public int addViewCount(int num) {
+		// TODO Auto-generated method stub
+		return template.update("BoardMapper.addViewCount", num);
+	}
+	public void boardInsert(BoardDTO dto) {
+		// TODO Auto-generated method stub
+		template.insert("BoardMapper.boardInsert", dto);
+	}
 
 }

@@ -29,15 +29,16 @@
 	    border-bottom: 1px solid #444444;
 	    padding: 10px;
 	}
-	th {
-
-    }
+	td > a{
+		color: black;
+		text-decoration: none;
+	}
 </style>
 </head>
 <body>
 <div class="container">
 <p>게시판</p>
-<a href="#" class="btn btn-outline-dark">새글 작성</a>
+<a href="boardInsertForm" class="btn btn-outline-dark">새글 작성</a>
 <select class="form-select" aria-label="Default select example">
   <option selected>전체</option>
   <option value="1">강아지</option>
@@ -64,7 +65,7 @@
 	<c:forEach var="x" items="${boardList }">
 		<tr>
 			<td>${x.num }</td>
-			<td><a href="#">${x.title }</a></td>
+			<td><a href="boardRetrieve?num=${x.num }">${x.title }</a></td>
 			<td>${x.userid }</td>
 			<td>${x.regdate }</td>
 			<td>${x.viewCount }</td>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +21,15 @@
 		height: 25px;
 		font-size:12px; 
 	}
+	.img-thumbnail, .thumbnail {
+	    box-shadow: 0 1px 2px rgba(0,0,0,.075);
+	    border: 0px;
+	}
+	.thumbImg{
+		width: 250px; 
+		height: auto;
+	}
+	
 </style>
 </head>
 <body>
@@ -48,7 +59,7 @@
 			<input type="radio" class="btn-check" name="options2" id="2_option3" autocomplete="off">
 			<label class="btn btn-secondary" for="2_option3">소고기</label>
 			<input type="radio" class="btn-check" name="options2" id="2_option4" autocomplete="off">
-			<label class="btn btn-secondary" for="2_option4">오리</label>
+			<label class="btn btn-secondary" for="2_option4">오리</label>                                                          
 			<input type="radio" class="btn-check" name="options2" id="2_option5" autocomplete="off">
 			<label class="btn btn-secondary" for="2_option5">그 외</label>
 		</div>
@@ -59,6 +70,23 @@
 			<label class="btn btn-secondary" for="3_option2">습식</label>	
 		</div>
 	</div>
+	<br /><br />
+	<div class="row" style="width:1100px; margin: auto;">
+	  <c:forEach items="#" var="cateList">
+	   	<div class="col-xs-6 col-md-3">
+	   		<div class="thumbnail">
+	   		<a href="#">
+			   <img id="indexItemImg" alt="이미지" src="images/none.png" class="thumbImg"/>
+	   		</a>
+	   		<a href="#">
+		   		<p style="padding:10px;  text-align: center; margin-bottom: 0px;">상품이름</p>
+		   	</a>
+		   		<p style="padding:10px;  text-align: center;">상품가격</p>
+	   		</div>
+	   	</div>
+	  </c:forEach>		
+	</div>
+	
 </div>
 </body>
 </html>
