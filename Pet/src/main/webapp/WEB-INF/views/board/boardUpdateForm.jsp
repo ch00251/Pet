@@ -1,18 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+	#userid{
+		margin-left: 16px;
+		margin-bottom: 5px;
+	}
 	#content{
 		display: none;
 		width: 100%;
 		height: 400px;
 	}
+	#cateAni{
+		width: 190.21px;
+		height: 29.95px;
+		margin-bottom: 5px;
+	}
 	#titlelabel{
 		margin-right: 15px;
+	}
+	#title{
+		margin-left: 17px;
 	}
 	.bottom{
 		display: table;
@@ -34,6 +48,20 @@
 		<div>
 			<label for="writer">작성자</label>
 			<input type="text" id="userid" name="userid" value="${board.userid }" disabled/>
+		</div>
+		<div>
+			<label for="cateAni">카테고리</label>
+			<select id="cateAni" name="cateAni">
+				<option value="all"
+				<c:if test="${board.cateAni=='all' }">selected</c:if>
+				>전체</option>
+				<option value="dog"
+				<c:if test="${board.cateAni=='dog' }">selected</c:if>
+				>강아지</option>
+				<option value="cat"
+				<c:if test="${board.cateAni=='cat' }">selected</c:if>
+				>고양이</option>
+			</select>
 		</div>
 		<div>
 			<label id="titlelabel" for="title">제목</label>
