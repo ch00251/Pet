@@ -54,8 +54,16 @@ public class BoardController {
 		service.boardUpdate(dto);
 		System.out.println("업데이트 내용"+dto);
 		session.setAttribute("update", "수정되었습니다");		
-		return "redirect:boardRetrieve?num="+dto.getNum();
-		
+		return "redirect:boardRetrieve?num="+dto.getNum();	
 	}
+	//게시판 글 삭제
+	@RequestMapping(value = "/loginCheck/boardDelete")
+	public String boardDelete(int num, HttpSession session) {
+		System.out.println(num);
+		service.boardDelete(num);
+		session.setAttribute("success", "삭제되었습니다.");
+		return "redirect:../boardList";
+	}
+	
 }
 
