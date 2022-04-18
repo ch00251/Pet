@@ -28,17 +28,17 @@ public class BoardController {
 		return "boardList";
 	}
 	//글 상세페이지
-	@RequestMapping(value = "/boardRetrieve")
-	@ModelAttribute("boardRetrieve")
-	public BoardDTO boardRetrieve(@RequestParam("num") int num, HttpSession session) {
-		System.out.println(num);//상품번호 넘어오나
+	@RequestMapping(value = "/loginCheck/boardRetrieve")
+	public String boardRetrieve(@RequestParam("num") int num, HttpSession session) {
+		System.out.println(num);
 		BoardDTO dto=service.boardRetrieve(num);
 		session.setAttribute("board", dto);
 		//조회수 1증가
 		int n=service.addViewCount(num);
 		System.out.println(dto);
-		return dto;
+		return "redirect:../boardRetrieve?num="+dto.getNum();
 	}
+	
 	//게시판 글 작성
 	@RequestMapping(value = "/boardInsert")
 	public String boardInsert(BoardDTO dto, HttpSession session) {
@@ -47,4 +47,23 @@ public class BoardController {
 		session.setAttribute("success", "등록되었습니다.");
 		return "redirect:boardList";
 	}
+
+	//게시판 글 수정
+	@RequestMapping(value = "/loginCheck/boardUpdate")
+	public String boradUdpate(BoardDTO dto, HttpSession session) {
+		service.boardUpdate(dto);
+		System.out.println("업데이트 내용"+dto);
+		session.setAttribute("update", "수정되었습니다");		
+		return "redirect:boardRetrieve?num="+dto.getNum();	
+	}
+	//게시판 글 삭제
+	@RequestMapping(value = "/loginCheck/boardDelete")
+	public String boardDelete(int num, HttpSession session) {
+		System.out.println(num);
+		service.boardDelete(num);
+		session.setAttribute("success", "삭제되었습니다.");
+		return "redirect:../boardList";
+	}
+	
 }
+

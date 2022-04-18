@@ -1,4 +1,3 @@
-<%@page import="com.dto.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,28 +25,26 @@
 </style>
 </head>
 <body>
-<%
-	MemberDTO dto=(MemberDTO)session.getAttribute("login");
-	String userid=dto.getUserid();	
-%>
 <div class="container">
-	<p>새글 추가 폼입니다.</p>
-	<form action="boardInsert" method="get">
-	<input type="hidden" value="<%=userid %>" name="userid">
+	<p>글 수정 페이지입니다.</p>
+	<form action="loginCheck/boardUpdate" method="get">
+	<input type="hidden" value="${board.num }" name="num">
+	<input type="hidden" value="${board.regdate }" name="regdate">
+	<input type="hidden" value="${board.viewCount }" name="viewCount">
 		<div>
 			<label for="writer">작성자</label>
-			<input type="text" id="userid" name="userid" value="<%=userid%>" disabled/>
+			<input type="text" id="userid" name="userid" value="${board.userid }" disabled/>
 		</div>
 		<div>
 			<label id="titlelabel" for="title">제목</label>
-			<input type="text" id="title" name="title"/>
+			<input type="text" id="title" name="title" value="${board.title }"/>
 		</div>
 		<div>
 			<label for="content">내용</label>
-			<textarea name="content" id="content" cols="30" rows="10"></textarea>
+			<textarea name="content" id="content" cols="30" rows="10">${board.content }</textarea>
 		</div>
 		<div class="bottom">
-			<button class="btn btn-outline-dark" type="submit" onclick="submitContents(this);">등록</button>
+			<button class="btn btn-outline-dark" type="submit" onclick="submitContents(this);">수정</button>
 			<button class="btn btn-outline-dark" type="reset">취소</button>
 		</div>
 	</form>
@@ -121,4 +118,4 @@
 	}
 </script>
 </body>
-</html>
+</html>65                  744444444444

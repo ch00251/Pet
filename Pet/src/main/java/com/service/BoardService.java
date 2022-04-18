@@ -34,4 +34,14 @@ public class BoardService {
 		dao.boardInsert(dto);
 	}
 
+	public void boardUpdate(BoardDTO dto) {
+		// TODO Auto-generated method stub
+		dao.boardUpdate(dto);
+	}
+
+	public void boardDelete(int num) {
+		// TODO Auto-generated method stub
+		dao.boardDelete(num);
+	}
+
 }
