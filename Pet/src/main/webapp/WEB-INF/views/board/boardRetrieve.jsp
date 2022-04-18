@@ -51,34 +51,48 @@
 	<table class="board" width="80%">
 		<tr>
 			<th>제목</th>
-			<td>${boardRetrieve.title }</td>
+			<td>${board.title }</td>
 		</tr>
 		<tr>
 			<th>작성자</th>
-			<td>${boardRetrieve.userid }</td>
+			<td>${board.userid }</td>
 		</tr>
 		<tr>
 			<td colspan="2">
 				<ul>
 					<li>
 						<strong>작성일</strong>
-						<span>${boardRetrieve.regdate }</span>
+						<span>${board.regdate }</span>
 					</li>
 					<li>
 						<strong>조회수</strong>
-						<span>${boardRetrieve.viewCount }</span>
+						<span>${board.viewCount }</span>
 					</li>
 				</ul>
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2"><div class="contents">${boardRetrieve.content }</div></td>
+			<td colspan="2"><div class="contents">${board.content }</div></td>
 		</tr>
 	</table>
 </div>
 <br />
 <div class="bottom">
-	<a class="btn btn-outline-dark" href="boardList">목록 보기</a>
+<%
+	MemberDTO d=(MemberDTO)session.getAttribute("login");
+	String id=d.getUserid();
+	BoardDTO dd=(BoardDTO)session.getAttribute("board");
+	String userid=dd.getUserid();
+	int num=dd.getNum();
+	System.out.println("로그인 한 아이디:"+id);
+	System.out.println("글 작성한 아이디:"+userid);
+	if(id.equals(userid)){ %>
+		<a class="btn btn-outline-dark" href="boardList">목록 보기</a>
+		<a class="btn btn-outline-dark" href="boardUpdate?num=<%=num%>">수정하기</a>
+		<a class="btn btn-outline-dark" href="loginCheck/boardDelete?num=<%=num%>">삭제하기</a>
+	<%}else{%>
+		<a class="btn btn-outline-dark" href="boardList">목록 보기</a>
+	<%}%>
 </div>
 </body>
 <br />

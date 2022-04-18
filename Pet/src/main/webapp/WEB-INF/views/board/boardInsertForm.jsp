@@ -26,13 +26,17 @@
 </style>
 </head>
 <body>
+<%
+	MemberDTO dto=(MemberDTO)session.getAttribute("login");
+	String userid=dto.getUserid();	
+%>
 <div class="container">
 	<p>새글 추가 폼입니다.</p>
 	<form action="boardInsert" method="get">
-	<input type="hidden" name="userid">
+	<input type="hidden" value="<%=userid %>" name="userid">
 		<div>
 			<label for="writer">작성자</label>
-			<input type="text" id="userid" name="userid"/>
+			<input type="text" id="userid" name="userid" value="<%=userid%>" disabled/>
 		</div>
 		<div>
 			<label id="titlelabel" for="title">제목</label>

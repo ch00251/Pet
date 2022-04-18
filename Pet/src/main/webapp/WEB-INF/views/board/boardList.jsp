@@ -38,7 +38,9 @@
 <body>
 <div class="container">
 <p>게시판</p>
-<a href="boardInsertForm" class="btn btn-outline-dark">새글 작성</a>
+<c:if test="${!empty login }">
+	<a href="boardInsertForm" class="btn btn-outline-dark">새글 작성</a>
+</c:if>
 <select class="form-select" aria-label="Default select example">
   <option selected>전체</option>
   <option value="1">강아지</option>
@@ -65,7 +67,7 @@
 	<c:forEach var="x" items="${boardList }">
 		<tr>
 			<td>${x.num }</td>
-			<td><a href="boardRetrieve?num=${x.num }">${x.title }</a></td>
+			<td><a href="loginCheck/boardRetrieve?num=${x.num }">${x.title }</a></td>
 			<td>${x.userid }</td>
 			<td>${x.regdate }</td>
 			<td>${x.viewCount }</td>
