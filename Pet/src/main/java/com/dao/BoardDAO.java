@@ -36,5 +36,9 @@ public class BoardDAO {
 		// TODO Auto-generated method stub
 		template.delete("BoardMapper.boardDelete", num);
 	}
+	public List<BoardDTO> selectList(String searchName) {
+		// TODO Auto-generated method stub
+		return template.selectList("BoardMapper.selectList", searchName);
+	}
 
 }
