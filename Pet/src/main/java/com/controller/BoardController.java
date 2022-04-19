@@ -65,5 +65,8 @@ public class BoardController {
 		return "redirect:../boardList";
 	}
 	
+	//게시판 선택조회
+	//@RequestMapping(value = "/targetSelect")
+	//public String targetSelect(HttpSession session)
 }
 
