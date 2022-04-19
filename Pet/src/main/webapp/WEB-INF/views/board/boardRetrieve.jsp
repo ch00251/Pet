@@ -26,6 +26,7 @@
 	}
 	li{
 		display: inline;
+		margin-right: 10px;
 	}
 	th{
 		width: 10%;
@@ -63,6 +64,10 @@
 					<li>
 						<strong>작성일</strong>
 						<span>${board.regdate }</span>
+					</li>
+					<li>
+						<strong>구분</strong>
+						<span>${board.cateAni }</span>
 					</li>
 					<li>
 						<strong>조회수</strong>

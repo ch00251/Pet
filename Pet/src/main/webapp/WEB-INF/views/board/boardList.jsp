@@ -64,6 +64,7 @@
 			<th>글번호</th>
 			<th width="50%">제목</th>
 			<th>작성자</th>
+			<th>구분</th>
 			<th>등록일</th>
 			<th>조회수</th>
 		</tr>
@@ -74,6 +75,7 @@
 			<td>${x.num }</td>
 			<td><a href="loginCheck/boardRetrieve?num=${x.num }">${x.title }</a></td>
 			<td>${x.userid }</td>
+			<td>${x.cateAni }</td>
 			<td>${x.regdate }</td>
 			<td>${x.viewCount }</td>
 		</tr>
