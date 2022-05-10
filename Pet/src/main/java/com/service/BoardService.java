@@ -44,4 +44,9 @@ public class BoardService {
 		dao.boardDelete(num);
 	}
 
+	public List<BoardDTO> selectList(String searchName) {
+		// TODO Auto-generated method stub
+		return dao.selectList(searchName);
+	}
+
 }

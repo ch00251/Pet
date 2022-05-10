@@ -12,6 +12,7 @@
 <mvc:view-controller path="/" view-name="main"/>
 <mvc:view-controller path="/loginForm" view-name="loginForm"/>
 <mvc:view-controller path="/boardList" view-name="boardList"/>
+<mvc:view-controller path="/targetSelect" view-name="targetSelect"/>
 <mvc:view-controller path="/boardRetrieve" view-name="boardRetrieve"/>
 <mvc:view-controller path="/boardInsertForm" view-name="boardInsertForm"/>
 <mvc:view-controller path="/boardUpdateForm" view-name="boardUpdateForm"/>

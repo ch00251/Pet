@@ -34,7 +34,6 @@ viewCount number default 0
 
 create sequence board_seq;
 
-
 --리뷰 테이블
 create table review(
 	reviewNum number primary key,
@@ -45,3 +44,17 @@ create table review(
 	--upCount number, --추천 count
 	regdate date
 );
+
+--상품 테이블
+create table item(
+	itemNum int primary key,
+	itemName varchar2(50) not null,
+	cateCode varchar2(30) not null,
+	itemPrice number not null,
+	itemCount number,
+	itemDes varchar2(500),
+	itemImg varchar2(100) not null
+);
+
+create sequence item_seq;
+

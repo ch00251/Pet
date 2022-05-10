@@ -66,7 +66,13 @@ public class BoardController {
 	}
 	
 	//게시판 선택조회
-	//@RequestMapping(value = "/targetSelect")
-	//public String targetSelect(HttpSession session)
+	@RequestMapping(value = "/targetSelect")
+	public String targetSelect(String searchName,HttpSession session) {
+		System.out.println(searchName);
+		List<BoardDTO> list=service.selectList(searchName);
+		System.out.println("selectList:"+list);
+		session.setAttribute("boardList", list);
+		return "targetSelect";
+	}
 }
 

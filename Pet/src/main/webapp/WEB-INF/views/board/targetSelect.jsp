@@ -50,7 +50,7 @@
 </c:if>
 <!-- select 기능 -->
 <form action="targetSelect">
-<select class="form-select" aria-label="Default select example" name="searchName">
+<select class="form-select" aria-label="Default select example" name="searchName" id="searchName">
   <option value="all">all</option>
   <option value="dog">dog</option>
   <option value="cat">cat</option>
