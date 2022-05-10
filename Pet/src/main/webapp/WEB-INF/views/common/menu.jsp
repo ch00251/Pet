@@ -13,8 +13,8 @@
             	강아지
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="itemList">사료</a></li><!-- 카테고리 번호 부여 예정 -->
-            <li><a class="dropdown-item" href="itemList">용품</a></li><!-- 카테고리 번호 부여 예정 -->
+            <li><a class="dropdown-item" href="itemList?cateCode=dogFood">사료</a></li><!-- 카테고리 번호 부여 예정 -->
+            <li><a class="dropdown-item" href="itemList?cateCode=dogGoods">용품</a></li><!-- 카테고리 번호 부여 예정 -->
           </ul>
         </li>
        <li class="nav-item dropdown">
@@ -22,8 +22,8 @@
             	고양이
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="itemList">사료</a></li><!-- 카테고리 번호 부여 예정 -->
-            <li><a class="dropdown-item" href="itemList">용품</a></li><!-- 카테고리 번호 부여 예정 -->
+            <li><a class="dropdown-item" href="itemList?cateCode=catFood">사료</a></li><!-- 카테고리 번호 부여 예정 -->
+            <li><a class="dropdown-item" href="itemList?cateCode=catGoods">용품</a></li><!-- 카테고리 번호 부여 예정 -->
           </ul>
         </li>
         <li class="nav-item dropdown">
