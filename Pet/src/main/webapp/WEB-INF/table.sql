@@ -21,6 +21,21 @@ create table member(
 
 create sequence member_seq;
 
+
+-- 파일 테이블
+create table file(
+num number primary key,
+writer varchar2(50) not null,
+title varchar2(100) not null,
+orgFileName varchar2(50),
+saveFileName varchar2(50),
+fileSize number,
+downCount number,
+regdate varchar2(50),
+startRowNum number,
+endRowNum number
+)
+
 -- 게시판 테이블
 create table board(
 num number primary key, 
