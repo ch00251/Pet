@@ -33,7 +33,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="reviewList">상품후기</a></li>
             <li><a class="dropdown-item" href="boardList">게시판</a></li>
-            <li><a class="dropdown-item" href="#">자료실</a></li>
+            <li><a class="dropdown-item" href="fileList">자료실</a></li>
           </ul>
         </li>
       </ul>
