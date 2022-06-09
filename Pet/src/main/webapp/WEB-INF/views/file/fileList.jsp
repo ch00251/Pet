@@ -14,13 +14,26 @@
 	p {
 		text-align: center;
 	}
+	table {
+	    width: 100%;
+	    border-top: 1px solid #444444;
+	    border-collapse: collapse;
+	}
+	th, td {
+	    border-bottom: 1px solid #444444;
+	    padding: 10px;
+	}
+	td > a{
+		color: black;
+		text-decoration: none;
+	}
 </style>
 </head>
 <body>
 <div class="container">
 	<p>자료실</p>
 	<c:if test="${!empty login }">
-		<a href="#" class="btn btn-outline-dark">파일 업로드</a>
+		<a href="fileUploadForm" class="btn btn-outline-dark">파일 업로드</a>
 	</c:if>
 	<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" id="breadcrumb">
 	  <ol class="breadcrumb">
